@@ -1,0 +1,10 @@
+p=[255 0 0;0 0 255;255 0 255];
+t=[255 255 0;0 255 255;255 0 255;0 255 255;255 0 255;255 255 0;255 255 255;255 255 255;255 255 255;
+255 0 255;255 255 0;0 255 255];
+net=newff(minmax(p),[3,6,12],{'tansig','purelin','purelin'},'trainlm');
+net.trainParam.show = 5;
+net.trainParam.epochs = 300;
+net.trainParam.goal = 1e-5;
+[net,tr]=train(net,p,t);
+a=sim(net,p)
+round(a')
