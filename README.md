@@ -29,12 +29,22 @@ Follow these steps to set up and run the code:
    - Run `startup.m` to initialize dependencies.
 
 ### **Running the Code**
-Execute the main script in MATLAB:
+- Execute the main script in MATLAB:
 ```matlab
-run('EVCmain.m')
+run('EVCusingARTMAP/EVCmain.m') 
 ```
-This will process the input images using visual cryptography and display the results.
+This will process the input images using visual cryptography using ARTMAP  and display the results.
 
+- Execute the main script in MATLAB:
+```matlab
+run('EVCusingBPN/EVCmain.m') 
+```
+This will process the input images using visual cryptography using BackpropogationNetwork  and display the results.
+- Execute the main script in MATLAB:
+```matlab
+run('EVCusingSOM/EVCmain.m') 
+```
+This will process the input images using visual cryptography using Self Organizing Map  and display the results.
 ### **Input Format**
 - The input should be RGB images in `.png` or `.jpg` format.
 - Images should be placed in the `input_images/` directory.
