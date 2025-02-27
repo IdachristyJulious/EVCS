@@ -1,80 +1,104 @@
+# EVCS:Extended Visual Cryptography System (MATLAB Implementation)
+
+## Overview
+This repository contains the MATLAB implementation of our research on Neural-Enhanced Visual Cryptography: A Framework for Embedding Secrets with High Fidelity. The project explores the integration of neural networks with visual cryptography to enhance the quality and robustness of secret image embedding. Our approach improves fidelity while maintaining security, making it suitable for secure image transmission and storage.
+
+##  Key Features
+Neural-Enhanced Visual Cryptography for improved image fidelity and security.
+Deep Learning Integration to optimize share generation and reconstruction.
+MATLAB-Based Implementation with high-level synthesis and experimental analysis.
+Robust Image Encoding ensuring secure and high-quality secret embedding.
+Optimized Performance for real-time execution and minimal information loss.
+
+---
+##  Comprehensive Usage Guide
+
+### **Installation & Setup**
+Follow these steps to set up and run the code:
+
+1. **Install MATLAB** (R2021a or later recommended).
+2. **Ensure Required Toolboxes are Installed** (see Dependencies & Requirements below).
+3. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/IdachristyJulious/EVCS.git
+   cd EVCS
+   ```
+4. **Open MATLAB and Set the Path:**
+   - Open MATLAB.
+   - Navigate to the repository folder.
+   - Run `startup.m` to initialize dependencies.
+
+### **Running the Code**
+Execute the main script in MATLAB:
+```matlab
+run('EVCmain.m')
+```
+This will process the input images using visual cryptography and display the results.
+
+### **Input Format**
+- The input should be RGB images in `.png` or `.jpg` format.
+- Images should be placed in the `input_images/` directory.
+
+### **Interpreting Output**
+- The processed images and cryptographic shares will be saved in the `output/` directory.
+- The visual cryptography scheme will generate two shares that can be combined to reconstruct the original image.
+
+---
+##  Dependencies & Requirements
+Ensure the following MATLAB toolboxes and libraries are installed:
+
+- **Image Processing Toolbox**
+- **Computer Vision Toolbox**
+- **Signal Processing Toolbox**
+- MATLAB version **R2021a or later**
+
+Install missing toolboxes using:
+```matlab
+matlab.addons.install('ToolboxName')
+```
+
+---
+## Key Algorithm Descriptions
+### **Algorithm Overview**
+The system implements a **Visual Cryptography Scheme (VCS)** with enhancements for secure medical image sharing. The key steps include:
+
+1. **Preprocessing:** Convert images to Halftone Images.
+2. **Share Generation:** Split images into multiple shares using a matrix-based cryptographic approach.
+3. **High-Level Synthesis:** Optimize the algorithm for performance efficiency.
+4. **Reconstruction:** Combine the shares to retrieve the original image.
+
+### **Mathematical Model**
+The scheme follows a probabilistic model where each pixel in the original image is divided across multiple shares, ensuring that no single share reveals information.
+
+---
+##  Experimental Reproducibility
+### **Example Datasets**
+We provide sample input images in the `input_images/` folder for easy replication.
+
+### **Replication Steps**
+1. Download the dataset or use your own images.
+2. Run `EVCmain.m` to generate cryptographic shares.
+3. Compare the reconstructed images with the original images.
+4. Evaluate performance metrics like **PSNR (Peak Signal-to-Noise Ratio)** and execution time.
+
+---
+## Permanent Links & Citation Format
+### **GitHub Repository**
+[EVCS GitHub Repository](https://github.com/IdachristyJulious/EVCS)
+
+### **Citation Format**
+If you use this work, please cite it as follows:
+
 Neural-Enhanced Visual Cryptography: A Framework for Embedding Secrets with High Fidelity
+Published in The Visual Computer
+Authors: Ida Christy Julious, D Abisha, R. Navedha Evangelin
 
-Overview
+Ensure to include this citation in any derivative work or publication.
 
-The EVCS (Embedding Secrets with Style) project is a MATLAB-based framework that leverages neural networks to enhance the fidelity of visual cryptography techniques. This approach aims to improve the quality of extended visual cryptography (EVC) by employing various neural network models such as feedforward networks, ARTMAP, and self-organizing maps.
+---
+##  Contact & Contributions
+For any issues, feel free to open an issue in the repository or contact the authors.
 
-Features
+Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
 
-Implementation of Extended Visual Cryptography (EVC) with high-fidelity secret embedding
-
-Neural network-based enhancements to improve image quality
-
-Comparison of different neural models using PSNR and time complexity metrics
-
-Robust to noise introduction
-
-MATLAB-based implementation for efficient computation
-
-Prerequisites
-
-To run this project, ensure you have the following installed:
-
-MATLAB (R2020a or later recommended)
-
-Image Processing Toolbox (for image operations)
-
-Deep Learning Toolbox (for neural network-based methods)
-
-Usage Guidelines
-
-Running the Code
-
-Prepare Input Images
-
-Ensure that you have grayscale or binary images ready for encryption.
-
-Place them in the input_images folder.
-
-Run the Main Script
-
-Execute the main MATLAB script:
-
-run_evcs.m
-
-This script will process the input images, apply the neural network models, and generate encrypted shares.
-
-Modify Parameters (Optional)
-
-Change the neural network model by modifying network_model in run_evcs.m.
-
-Adjust encryption settings in config.m.
-
-View Results
-
-The encrypted shares and reconstructed images will be saved in the output_images folder.
-
-PSNR and time complexity metrics will be displayed in the command window.
-
-Example
-
-inputImage = imread('input_images/sample.png');
-shares = generate_shares(inputImage);
-reconstructedImage = reconstruct_image(shares);
-imshow(reconstructedImage);
-
-Dataset and Open Source Code
-
-The dataset and source code are openly available in this repository. To enhance transparency and reproducibility, please cite the DOI when referencing this work.
-
-Citation
-
-If you use this project in your research, please cite it as:
-
-@article{EVCS2025,
-  author = {Idachristy Julious et al.},
-  title = {Neural-Enhanced Visual Cryptography: A Framework for Embedding Secrets with High Fidelity},
-  journal = {The Visual Computer},
-  year = {2025},
-  publisher = {Springer}
-}
+📧 **Email:** christy@nec.edu.in 
